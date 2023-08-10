@@ -1,0 +1,32 @@
+{
+  "name": "@paperdave/asset-bundle",
+  "description": "Minimal archive format",
+  "version": "1.0.0",
+  "author": "Dave Caruso <me@paperdave.net>",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "abundle": "./src/abundle.ts"
+  },
+  "exports": {
+    "bun": "./src/AssetBundle.ts",
+    "default": "./src/AssetBundle.js"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "build": "bun build src/AssetBundle.ts --outfile ./src/AssetBundle.js --minify-syntax"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "src/abundle.ts",
+    "src/AssetBundle.ts",
+    "src/AssetBundle.js",
+    "README.md",
+    "tsconfig.json"
+  ]
+}
